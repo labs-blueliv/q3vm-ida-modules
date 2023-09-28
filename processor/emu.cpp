@@ -114,6 +114,7 @@ int q3_t::q3_emu(const insn_t &insn)
 {	
 	uint32 feature = insn.get_canon_feature(ph);
 	
+	// IMPORTANT VARIABLE IT IS A MESS OTHERWAYS
 	flow = (feature & CF_STOP) == 0;
 
 	if (feature & CF_CALL) handle_call(insn);
